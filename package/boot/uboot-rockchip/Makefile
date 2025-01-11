@@ -255,7 +255,10 @@ define U-Boot/generic-rk3568
     hinlink_opc-h68k \
     hinlink_opc-h69k \
     lyt_t68m \
-    seewo_sv21
+    seewo_sv21 \
+    nsy_g68-plus \
+    nsy_g16-plus \
+    bendian_bd-one
 endef
 
 define U-Boot/mmbox-anas3035-rk3568
