@@ -290,7 +290,7 @@
 		phy-names = "sata-phy";
 		ports-implemented = <0x01>;
 		power-domains = <0x13 0x0f>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	usb@fcc00000 {
