@@ -290,6 +290,19 @@
 		phy-names = "sata-phy";
 		ports-implemented = <0x01>;
 		power-domains = <0x13 0x0f>;
+		status = "disabled";
+	};
+
+	sata@fc000000 {
+		compatible = "rockchip,rk3568-dwc-ahci\0snps,dwc-ahci";
+		reg = <0x00 0xfc000000 0x00 0x1000>;
+		clocks = <0x11 0x96 0x11 0x97 0x11 0x98>;
+		clock-names = "sata\0pmalive\0rxoob";
+		interrupts = <0x00 0x5e 0x04>;
+		phys = <0x16 0x01>;
+		phy-names = "sata-phy";
+		ports-implemented = <0x01>;
+		power-domains = <0x13 0x0f>;
 		status = "okay";
 	};
 
@@ -305,7 +318,7 @@
 		resets = <0x11 0x94>;
 		snps,dis_u2_susphy_quirk;
 		status = "okay";
-		phys = <0x15 0x16 0x04>;
+		phys = <0x15>;
 		phy-names = "usb2-phy\0usb3-phy";
 		extcon = <0x17>;
 	};
@@ -317,13 +330,13 @@
 		clocks = <0x11 0xa9 0x11 0xaa 0x11 0xa8>;
 		clock-names = "ref_clk\0suspend_clk\0bus_clk";
 		dr_mode = "host";
-		phys = <0x18 0x12 0x04>;
+		phys = <0x18>;
 		phy-names = "usb2-phy\0usb3-phy";
 		phy_type = "utmi_wide";
 		power-domains = <0x13 0x0f>;
 		resets = <0x11 0x95>;
 		snps,dis_u2_susphy_quirk;
-		status = "disabled";
+		status = "okay";
 	};
 
 	interrupt-controller@fd400000 {
@@ -2871,19 +2884,6 @@
 				phandle = <0xd6>;
 			};
 		};
-	};
-
-	sata@fc000000 {
-		compatible = "rockchip,rk3568-dwc-ahci\0snps,dwc-ahci";
-		reg = <0x00 0xfc000000 0x00 0x1000>;
-		clocks = <0x11 0x96 0x11 0x97 0x11 0x98>;
-		clock-names = "sata\0pmalive\0rxoob";
-		interrupts = <0x00 0x5e 0x04>;
-		phys = <0x16 0x01>;
-		phy-names = "sata-phy";
-		ports-implemented = <0x01>;
-		power-domains = <0x13 0x0f>;
-		status = "okay";
 	};
 
 	syscon@fdc70000 {
