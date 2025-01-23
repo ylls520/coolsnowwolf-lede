@@ -150,8 +150,8 @@ endef
 TARGET_DEVICES += nsy_g16-plus
 
 define Device/bdy_g18-pro
-  DEVICE_VENDOR := NSY
-  DEVICE_MODEL := G16
+  DEVICE_VENDOR := BDY
+  DEVICE_MODEL := G18
   SOC := rk3568
   DEVICE_DTS := rockchip/rk3568-bdy-g18-pro
   SUPPORTED_DEVICES := bdy,g18-pro
