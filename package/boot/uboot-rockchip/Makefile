@@ -258,6 +258,7 @@ define U-Boot/generic-rk3568
     seewo_sv21 \
     nsy_g68-plus \
     nsy_g16-plus \
+    bdy_g18-pro \
     bendian_bd-one
 endef
 
