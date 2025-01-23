@@ -149,6 +149,18 @@ define Device/nsy_g16-plus
 endef
 TARGET_DEVICES += nsy_g16-plus
 
+define Device/bdy_g18-pro
+  DEVICE_VENDOR := NSY
+  DEVICE_MODEL := G16
+  SOC := rk3568
+  DEVICE_DTS := rockchip/rk3568-bdy-g18-pro
+  SUPPORTED_DEVICES := bdy,g18-pro
+  UBOOT_DEVICE_NAME := generic-rk3568
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-gpio-button-hotplug kmod-nvme kmod-scsi-core kmod-thermal kmod-switch-rtl8306 kmod-switch-rtl8366-smi kmod-switch-rtl8366rb kmod-switch-rtl8366s kmod-hwmon-pwmfan kmod-leds-pwm kmod-r8125 kmod-r8168 kmod-switch-rtl8367b swconfig kmod-swconfig
+endef
+TARGET_DEVICES += bdy_g18-pro
+
 define Device/bendian_bd-one
   DEVICE_VENDOR := BENDIAN
   DEVICE_MODEL := BD ONE
